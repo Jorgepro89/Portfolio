@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;700;800&display=swap');
+
+.loading{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    display: flex;
+    background-color: #282c34;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gabarito', sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+}
+
+.loading-animated{
+    font-size: 50px;
+    font-weight: 500;
+    min-width: 300px;
+}
+
+.loading-animated span{
+    position: relative;
+}
+
+.loading-animated span::before{
+    content: "Programmers";
+    color: #f16B41;
+    animation: words 10s infinite;
+}
+
+.loading-animated span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #282c34;
+    border-left: 2px solid #f16B41;
+    right: -8px;
+    animation: cursor .8s infinite, typing 10s steps(14) infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 2px solid #282c34;
+    }
+}
+
+@keyframes words {
+    0%, 20%{
+        content: "Programmers";
+    }
+    21%, 40%{
+        content: "Animators";
+    }
+    41%, 60%{
+        content: "Engineers";
+    }
+    61%, 80%{
+        content: "Developers";
+    }
+    81%, 100%{
+        content: "Illustrators";
+    }
+}
+
+@keyframes typing{
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%, 100%{
+        width: calc(100% + 8px);
+    }
+}
