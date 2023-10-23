@@ -6,6 +6,9 @@ import Main from './components/main/Main';
 import Cards from './components/cards/Cards';
 import ProjectsJor from './components/pageJorge/ProyectCardJ';
 import Projects from './components/project-grid/ProyectCard';
+import ContactMajo from './components/extra/ContactMajo';
+import ContactJorge from './components/extra/ContactJorge';
+import NavBar from './components/nav-bar/NavBar';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,6 +38,24 @@ function App() {
         </Route>
         <Route path="/majo" exact>
           <Projects/>
+        </Route>
+        <Route path="/" exact>
+          <NavBar />
+        </Route>
+        <Route path="/contactMajo" exact>
+          <ContactMajo/>
+        </Route>
+        <Route path="/" exact>
+          <NavBar />
+        </Route>
+        <Route path="/contactJorge" exact>
+          <ContactJorge/>
+        </Route>
+        <Route path="/" exact>
+          <NavBar />
+        </Route>
+        <Route path="/main" exact className='App-header'>
+          <Main/>
         </Route>
       </Switch>
     </Router>
