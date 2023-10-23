@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;700;800&display=swap');
+
+.App {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    font-family: 'Gabarito', sans-serif;
+}
+
+.cartas{
+  margin-bottom: 200px;
+}
+  
+img {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    object-fit: scale-down;
+    /* object-position: 0 -500px; */
+}
+  
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    color: white;
+    object-fit: scale-down;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
+}
+  
+.banner h1{
+    position: absolute;
+    top: 100px;
+    width: 70%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-weight: 800;
+    font-size: 3rem;
+    font-family: 'Gabarito', sans-serif;
+}
+  
+:root{
+    --main-color: rgb(90, 155, 234);
+}
+  
+  
+@keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+}
+@keyframes ripple-fill-container {
+    from{
+      transform: scale(0, 1);
+    }
+    to {
+      transform: scale(2, 1);
+    }
+}
+@keyframes ripple-empty-container {
+    from{
+      transform: scale(2, 1);
+    }
+    to {
+      transform: scale(0, 1);
+    }
+}
+  
+span.ripple {
+    position: absolute; 
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.75s linear;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+  
+@media screen and (max-width: 40em){
+    img{
+      height: 100%;
+      object-fit: cover;
+    }
+}
